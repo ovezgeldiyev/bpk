@@ -1,0 +1,351 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  transform: translateX(100%);
+  @include transition;
+  &.active {
+    @include transformReset;
+  }
+  &__inner {
+    flex-direction: column;
+    position: absolute;
+    justify-content: unset;
+    align-items: flex-end;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 200px 0 30px 0;
+    height: 100%;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #53caec, #385988);
+    &-main {
+      width: 50%;
+      color: $white;
+      margin: 0 0 0 auto;
+    }
+    &-links {
+      padding-bottom: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 2px dashed $white;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 35px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      a {
+        font-size: 34px;
+        line-height: 100%;
+        font-weight: 300;
+        color: $white;
+        &:hover {
+          opacity: 1;
+          text-decoration: underline;
+        }
+      }
+    }
+    &-row {
+      padding: 10px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 800px;
+    }
+    &-foot {
+      border-top: 2px dashed $white;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      a {
+        font-size: 17px;
+        line-height: 100%;
+        font-weight: 300;
+        color: $white;
+        margin-bottom: 12px;
+        &:hover {
+          opacity: 1;
+          text-decoration: underline;
+        }
+      }
+    }
+    &-social {
+      display: flex;
+      align-items: center;
+      a {
+        width: 27px;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px 0 0;
+        &:hover {
+          opacity: .7;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &Item {
+    margin: 20px 0;
+    width: calc(50% - 12px);
+    &__head {
+      margin-bottom: 5px;
+    }
+    p {
+      font-weight: 300;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+    }
+    &__body {
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: $white;
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.burger {
+  display: block;
+  cursor: pointer;
+  @include transition;
+  position: relative;
+  width: 50px;
+  height: 32px;
+  z-index: 10;
+  margin-bottom: 40px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &::before {
+    top: 0;
+    width: 100%;
+    height: 6px;
+    background-color: $main;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 50%;
+    @include transformX;
+  }
+  span {
+    top: 50%;
+    width: 100%;
+    height: 6px;
+    background-color: $main;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 50%;
+    @include transform;
+    @include transition;
+  }
+  &::after {
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background-color: $main;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 50%;
+    @include transformX;
+  }
+  b {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    line-height: 100%;
+    font-weight: 300;
+    color: $main;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  &.active {
+    &::before {
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
+      background-color: $white;
+    }
+    span {
+      opacity: 0;
+    }
+    &::after {
+      bottom: 50%;
+      -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+      transform: translate(-50%, 50%) rotate(-45deg);
+      background-color: $white;
+    }
+    b {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+// 1380px
+@mixin nav-xxxlg-xxxxlg {
+  .nav {
+    &__inner {
+      &-main {
+        width: 100%;
+        max-width: 700px;
+      }
+    }
+  }
+}
+// 1250px
+@mixin nav-xlg-xxlg-extra {
+  .nav {
+  }
+}
+// 1180px
+@mixin nav-xlg-xxlg {
+  .nav {
+  }
+}
+// 1024px
+@mixin nav-lg-xlg {
+  .nav {
+    &__inner {
+      padding-top: 180px;
+      &-main {
+        padding-left: 40px;
+        box-sizing: border-box;
+      }
+      &-links {
+        padding-bottom: 55px;
+        a {
+          font-size: 25px;
+        }
+      }
+    }
+    &Item {
+      width: calc(50% - 7px);
+      h6,
+      p {
+        font-size: 17px;
+        line-height: 22px;
+      }
+    }
+  }
+  .burger {
+    margin: 0;
+    width: 35px;
+    height: 30px;
+    &::after {
+      height: 5px;
+    }
+    &::before {
+      height: 5px;
+    }
+    span {
+      height: 5px;
+    }
+    b {
+      display: none;
+    }
+  }
+}
+// 540px
+@mixin nav-xsm-sm {
+  .nav {
+    &__inner {
+      &-main {
+        max-width: 340px;
+        margin: 0 0 0 auto;
+      }
+      &-links {
+        position: relative;
+        border: unset;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 500px;
+          height: 2px;
+          border-bottom: 2px dashed $white;
+          content: "";
+          box-sizing: border-box;
+        }
+      }
+      &-row {
+        flex-direction: column;
+      }
+      &-foot {
+        padding: 0;
+        border: unset;
+      }
+      &-row {
+        padding: 20px 0 10px;
+      }
+      &-social {
+        order: -1;
+        padding-bottom: 25px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        position: relative;
+        &::before {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 500px;
+          height: 2px;
+          border-bottom: 2px dashed $white;
+          content: "";
+          box-sizing: border-box;
+        }
+      }
+    }
+    &Item {
+      width: 100%;
+      margin: 12px 0;
+      &:first-child {
+        order: -2;
+      }
+      &:last-child {
+        order: -1;
+      }
+      &__head {
+        
+      }
+      &__body {
+        opacity: 0;
+        max-height: 0;
+        transition: .3s ease;
+        overflow: hidden;
+        &.active {
+          opacity: 1;
+          max-height: 300px;
+        }
+      }
+    }
+  }
+}

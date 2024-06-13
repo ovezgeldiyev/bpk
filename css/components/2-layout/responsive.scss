@@ -1,0 +1,153 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include hero-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  .main {
+    padding-top: 143.3px;
+  }
+  h1, h2 {
+    font-size: 30px;
+  }
+  @include header-xxxlg-xxxxlg;
+  @include nav-xxxlg-xxxxlg;
+  @include hero-xxxlg-xxxxlg;
+  @include partner-xxxlg-xxxxlg;
+  @include location-xxxlg-xxxxlg;
+  @include reference-xxxlg-xxxxlg;
+  @include project-xxxlg-xxxxlg;
+  @include about-xxxlg-xxxxlg;
+  @include team-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include hero-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  @include hero-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .copy {
+    font-size: 9px;
+  }
+  .main {
+    padding-top: 123.92px;
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include hero-lg-xlg;
+  @include partner-lg-xlg;
+  @include location-lg-xlg;
+  @include reference-lg-xlg;
+  @include project-lg-xlg;
+  @include imprint-lg-xlg;
+  @include about-lg-xlg;
+  @include team-lg-xlg;
+
+}
+// 930px
+@include md-lg {
+  h1, h2 {
+    font-size: 25px;
+  }
+  p {
+    &.big {
+      font-size: 21px;
+    }
+  }
+  @include hero-md-lg;
+}
+// 750px
+@include sm-md {
+  .banner {
+    &.big {
+      margin: 50px 0;
+    }
+  }
+  .showMore {
+    &Btn {
+      display: flex;
+    }
+  }
+  .mobRemove {
+    display: none !important;
+  }
+  @include hero-sm-md;
+  @include partner-sm-md;
+  @include location-sm-md;
+  @include reference-sm-md;
+  @include project-sm-md;
+  @include imprint-sm-md;
+  @include about-sm-md;
+  @include team-sm-md;
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  @include hero-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  h1, h2 {
+    font-size: 20px;
+  }
+  h6 {
+    font-size: 17px;
+  }
+  body {
+    font-size: 17px;
+  }
+  p {
+    font-size: 17px;
+    &.big {
+      font-size: 17px;
+    }
+  }
+  .main {
+    padding-top: 103.92px;
+  }
+
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include hero-xsm-sm;
+  @include footer-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include hero-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  .auto__container {
+    padding: 0 24px;
+  }
+  h1, h2 {
+    font-size: 17px;
+  }
+  h6 {
+    font-size: 15px !important;
+    &.sm {
+      font-size: 15px;
+    }
+  }
+  body {
+    font-size: 15px;
+  }
+  p {
+    font-size: 15px !important;
+    &.big {
+      font-size: 15px;
+    }
+    &.sm {
+      font-size: 15px;
+    }
+  }
+  @include header-xxxsm-xxsm;
+  @include footer-xxxsm-xxsm;
+}

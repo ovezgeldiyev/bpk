@@ -1,0 +1,116 @@
+.hero {
+  &Top {
+    padding: 100px 0 40px;
+    h1 {
+      max-width: 840px;
+      line-height: 46px;
+      height: 184px;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &Banner {
+    max-width: 1940px;
+    margin: 0 auto;
+    &.sm {
+      .heroBanner {
+        &__inner {
+          padding-bottom: 42%;
+        }
+      }
+    }
+    &__inner {
+      width: 100%;
+      padding-bottom: 56%;
+      position: relative;
+      min-height: 260px;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include fullImage;
+    }
+  }
+  &Content {
+    padding: 100px 0;
+    &.sm {
+      padding-bottom: 0;
+    }
+    &__inner {
+      p {
+        max-width: 840px;
+      }
+    }
+  }
+}
+// 1380px
+@mixin hero-xxxlg-xxxxlg {
+  .hero {
+    &Top {
+      padding: 60px 0 30px;
+    }
+    &Content {
+      padding: 60px 0;
+    }
+  }
+}
+// 1250px
+@mixin hero-xlg-xxlg-extra {
+  .hero {
+  }
+}
+// 1180px
+@mixin hero-xlg-xxlg {
+  .hero {
+  }
+}
+// 1024px
+@mixin hero-lg-xlg {
+  .hero {
+  }
+}
+// 930px
+@mixin hero-md-lg {
+  .hero {
+    &Top {
+      padding: 50px 0 40px;
+      h1 {
+        display: block;
+        line-height: 138%;
+        height: unset;
+      }
+    }
+    &Content {
+      padding: 30px 0 50px;
+    }
+  }
+}
+// 750px
+@mixin hero-sm-md {
+  .hero {
+    &Content {
+      &.sm {
+        padding-bottom: 50px;
+      }
+    }
+  }
+}
+// 650px
+@mixin hero-sm-md-extra {
+  .hero {
+  }
+}
+// 540px
+@mixin hero-xsm-sm {
+  .hero {
+  }
+}
+// 440px
+@mixin hero-xxsm-xsm {
+  .hero {
+  }
+}

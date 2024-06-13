@@ -1,0 +1,146 @@
+.reference {
+  padding: 200px 0;
+  &__inner {
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -12px;
+    }
+    h2 {
+      max-width: 810px;
+    }
+    .link {
+      margin-left: 15px;
+    }
+  }
+  &Item {
+    width: calc(50% - 24px);
+    margin: 30px 12px;
+    &:hover {
+      opacity: 1;
+      img {
+        transform: scale(1.1);
+      }
+    }
+    &__image {
+      position: relative;
+      padding-bottom: 65%;
+      overflow: hidden;
+      margin-bottom: 17px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+        transition: 0.3s ease;
+      }
+    }
+    &__content {
+        padding-top: 50px;
+    }
+    &__info {
+      display: none;
+    }
+  }
+}
+// 1380px
+@mixin reference-xxxlg-xxxxlg {
+  .reference {
+    padding: 150px 0;
+    &__inner {
+      &-row {
+        margin: 0 -8px;
+      }
+    }
+    &Item {
+      width: calc(50% - 16px);
+      margin: 24px 8px;
+    }
+  }
+}
+// 1024px
+@mixin reference-lg-xlg {
+  .reference {
+    padding: 100px 0;
+
+    &Item {
+      &__content {
+        display: none;
+      }
+    }
+  }
+}
+// 750px
+@mixin reference-sm-md {
+  .reference {
+    padding: 50px 0;
+    &__inner {
+      position: relative;
+      padding-bottom: 45px;
+      &-title {
+        margin-bottom: 48px;
+      }
+      &-row {
+        flex-direction: column;
+        margin: 0;
+      }
+      .link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      .showMore {
+        &.active {
+          .referenceItem {
+            &:nth-child(n) {
+              display: block;
+              margin-bottom: 50px;
+            }
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+        .referenceItem {
+          &:nth-child(n + 7) {
+            display: none;
+          }
+          &:nth-child(6) {
+            margin: 0;
+          }
+        }
+        &Btn {
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    &Item {
+      margin: 0 0 50px 0;
+      width: 100%;
+      &:last-child {
+        margin: 0;
+      }
+      &__info {
+        display: block;
+        padding-top: 5px;
+        p {
+          font-size: 17px;
+          line-height: 100%;
+          b {
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}

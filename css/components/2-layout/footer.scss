@@ -1,0 +1,140 @@
+.footer {
+  background: linear-gradient(135deg, #53caec, #385988);
+  padding: 40px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      font-size: 17px;
+      line-height: 100%;
+      font-weight: 300;
+      color: $white;
+      margin-bottom: 10px;
+      &:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &-logo {
+      width: 170px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    &-main {
+      width: 50%;
+      max-width: 390px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-social {
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      a {
+        width: 27px;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px 0 0 !important;
+        &:hover {
+          opacity: .7;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin footer-sm-md {
+  .footer {
+    padding: 30px 0;
+    &__inner {
+      &-logo {
+        width: 130px;
+        margin-left: -20px;
+      }
+      &-main {
+        width: 55%;
+      }
+    }
+  }
+}
+// 650px
+@mixin footer-sm-md-extra {
+  .footer {
+  }
+}
+// 540px
+@mixin footer-xsm-sm {
+  .footer {
+    padding: 20px 0 40px;
+    &__inner {
+      align-items: flex-start;
+      &-logo {
+        margin: -15px 0 0 -40px;
+      }
+      &-main {
+        width: calc(100% - 150px);
+        max-width: 180px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      &-links {
+        margin-bottom: 35px;
+      }
+      &-social {
+        order: -1;
+        margin-bottom: 35px;
+      }
+      a {
+        margin-bottom: 25px;
+        font-size: 14px;
+      }
+      &-side {
+        a {
+          margin-bottom: 20px;
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// 390px
+@mixin footer-xxxsm-xxsm {
+  .footer {
+    &__inner {
+      &-logo {
+        margin-left: -24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.imprint {
+  padding: 100px 0 130px;
+  &__inner {
+    display: flex;
+    justify-self: unset;
+    justify-content: space-between;
+    &-content {
+      width: calc(50% - 12px);
+    }
+    h2 {
+      margin-bottom: 60px;
+    }
+    h6 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 50px;
+      &:last-child {
+        margin: 0;
+      }
+      a {
+        color: $main;
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+      }
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+}
+// 1024px
+@mixin imprint-lg-xlg {
+  .imprint {
+    padding: 70px 0 90px;
+    &__inner {
+      flex-direction: column;
+      &-content {
+        width: 100%;
+        margin-bottom: 100px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      h2 {
+        margin-bottom: 45px;
+      }
+      h6 {
+        &:first-of-type {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin imprint-sm-md {
+  .imprint {
+    padding: 50px 0;
+  }
+}

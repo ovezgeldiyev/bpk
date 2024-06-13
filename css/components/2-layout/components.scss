@@ -1,0 +1,143 @@
+h1, h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 138%;
+    text-transform: uppercase;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+    font-size: 21px;
+    line-height: 138%;
+    text-transform: uppercase;
+    font-weight: 700;
+    &.sm {
+        font-size: 17px;
+        line-height: 130%;
+    }
+}
+p {
+    &.big {
+        font-size: 25px;
+        line-height: 132%;
+    }
+    &.sm {
+        font-size: 17px;
+        line-height: 130%;
+    }
+}
+.main {
+    overflow: hidden;
+    padding-top: 176.34px;
+}
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.link {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 100%;
+    color: $main;
+    text-transform: uppercase;
+    white-space: nowrap;
+    &:hover {
+        opacity: 1;
+        img {
+            transform: translateX(20%);
+        }
+    }
+    &__icon {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8px;
+        img {
+            width: 100%;
+            transition: .3s ease;
+        }
+    }
+    b {
+        font-weight: 400;
+    }
+}
+.copy {
+    position: absolute;
+    bottom: 10px;
+    right: 6px;
+    z-index: 2;
+    color: $white;
+    font-size: 11px;
+    line-height: 100%;
+    font-weight: 300;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+}
+.banner {
+    max-width: 1940px;
+    margin: 0 auto;
+    &__image {
+      width: 100%;
+      padding-bottom: 42%;
+      position: relative;
+      min-height: 260px;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include fullImage;
+    }
+}
+.showMore {
+    &Btn {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &.active {
+            img {
+                transform: scaleY(-1);
+            }
+        }
+        span {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 10px;
+          img {
+            transition: .3s ease;
+            width: 100%;
+          }
+        }
+        b {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 17px;
+            line-height: 100%;
+            white-space: nowrap;
+        }
+    }
+}
